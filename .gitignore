@@ -1,0 +1,73 @@
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+env/
+venv/
+.venv/
+ENV/
+build/
+develop-eggs/
+dist/
+downloads/
+eggs/
+.eggs/
+lib/
+lib64/
+parts/
+sdist/
+var/
+
+wheels/
+*.egg-info/
+.installed.cfg
+*.egg
+
+# Testing & Coverage
+.pytest_cache/
+.coverage
+htmlcov/
+.tox/
+.nox/
+coverage.xml
+*.cover
+
+# Environments & Secrets
+.env
+.env.local
+.env.*.local
+*.pem
+*.key
+
+# IDE & OS
+.vscode/
+.idea/
+*.swp
+*.swo
+.DS_Store
+Thumbs.db
+
+# Frontend
+frontend/node_modules/
+frontend/dist/
+frontend/build/
+frontend/.next/
+frontend/coverage/
+
+# ML Artifacts (only ignore heavy binary model weights, keep structure)
+ml/artifacts/*.joblib
+ml/artifacts/*.pkl
+ml/artifacts/*.onnx
+ml/artifacts/*.pt
+ml/artifacts/*.bin
+ml/datasets/raw/*
+!ml/datasets/raw/.gitkeep
+!ml/artifacts/.gitkeep
+
+# Logs & Temp
+*.log
+logs/
+tmp/
+scratch/

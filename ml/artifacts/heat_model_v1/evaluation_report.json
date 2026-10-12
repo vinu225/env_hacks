@@ -1,0 +1,692 @@
+{
+  "model_version": "heat_model_v1.0.0",
+  "evaluated_at": "2026-10-11T11:29:11Z",
+  "validation": {
+    "lightgbm": {
+      "partition": "val",
+      "total_samples": 26250,
+      "accuracy": 0.6328,
+      "balanced_accuracy": 0.6024,
+      "macro_f1": 0.5124,
+      "class_metrics": {
+        "LOW": {
+          "support": 8007,
+          "precision": 0.8613,
+          "recall": 0.5593,
+          "f1": 0.6782,
+          "tp": 4478,
+          "fp": 721,
+          "fn": 3529
+        },
+        "MODERATE": {
+          "support": 14585,
+          "precision": 0.698,
+          "recall": 0.6823,
+          "f1": 0.6901,
+          "tp": 9952,
+          "fp": 4306,
+          "fn": 4633
+        },
+        "HIGH": {
+          "support": 3333,
+          "precision": 0.3623,
+          "recall": 0.5989,
+          "f1": 0.4514,
+          "tp": 1996,
+          "fp": 3514,
+          "fn": 1337
+        },
+        "SEVERE": {
+          "support": 325,
+          "precision": 0.1442,
+          "recall": 0.5692,
+          "f1": 0.2301,
+          "tp": 185,
+          "fp": 1098,
+          "fn": 140
+        },
+        "CRITICAL": {
+          "support": 0,
+          "precision": "undefined",
+          "recall": "undefined",
+          "f1": "undefined",
+          "tp": 0,
+          "fp": 0,
+          "fn": 0
+        }
+      },
+      "high_recall": 0.5989,
+      "severe_recall": 0.5692,
+      "escalation_recall": 0.7679,
+      "severe_false_negatives": 140,
+      "severe_false_negative_rate": 0.4308,
+      "confusion_matrix": {
+        "LOW": {
+          "LOW": 4478,
+          "MODERATE": 3523,
+          "HIGH": 5,
+          "SEVERE": 1,
+          "CRITICAL": 0
+        },
+        "MODERATE": {
+          "LOW": 655,
+          "MODERATE": 9952,
+          "HIGH": 3409,
+          "SEVERE": 569,
+          "CRITICAL": 0
+        },
+        "HIGH": {
+          "LOW": 66,
+          "MODERATE": 743,
+          "HIGH": 1996,
+          "SEVERE": 528,
+          "CRITICAL": 0
+        },
+        "SEVERE": {
+          "LOW": 0,
+          "MODERATE": 40,
+          "HIGH": 100,
+          "SEVERE": 185,
+          "CRITICAL": 0
+        },
+        "CRITICAL": {
+          "LOW": 0,
+          "MODERATE": 0,
+          "HIGH": 0,
+          "SEVERE": 0,
+          "CRITICAL": 0
+        }
+      },
+      "log_loss": 3.7511,
+      "brier_score": 1.3362
+    },
+    "persistence": {
+      "partition": "val",
+      "total_samples": 26250,
+      "accuracy": 0.7485,
+      "balanced_accuracy": 0.5896,
+      "macro_f1": 0.6201,
+      "class_metrics": {
+        "LOW": {
+          "support": 8007,
+          "precision": 0.6681,
+          "recall": 0.9396,
+          "f1": 0.7809,
+          "tp": 7523,
+          "fp": 3738,
+          "fn": 484
+        },
+        "MODERATE": {
+          "support": 14585,
+          "precision": 0.8182,
+          "recall": 0.7305,
+          "f1": 0.7718,
+          "tp": 10654,
+          "fp": 2368,
+          "fn": 3931
+        },
+        "HIGH": {
+          "support": 3333,
+          "precision": 0.7505,
+          "recall": 0.4143,
+          "f1": 0.5339,
+          "tp": 1381,
+          "fp": 459,
+          "fn": 1952
+        },
+        "SEVERE": {
+          "support": 325,
+          "precision": 0.7008,
+          "recall": 0.2738,
+          "f1": 0.3938,
+          "tp": 89,
+          "fp": 38,
+          "fn": 236
+        },
+        "CRITICAL": {
+          "support": 0,
+          "precision": "undefined",
+          "recall": "undefined",
+          "f1": "undefined",
+          "tp": 0,
+          "fp": 0,
+          "fn": 0
+        }
+      },
+      "high_recall": 0.4143,
+      "severe_recall": 0.2738,
+      "escalation_recall": 0.4505,
+      "severe_false_negatives": 236,
+      "severe_false_negative_rate": 0.7262,
+      "confusion_matrix": {
+        "LOW": {
+          "LOW": 7523,
+          "MODERATE": 484,
+          "HIGH": 0,
+          "SEVERE": 0,
+          "CRITICAL": 0
+        },
+        "MODERATE": {
+          "LOW": 3612,
+          "MODERATE": 10654,
+          "HIGH": 319,
+          "SEVERE": 0,
+          "CRITICAL": 0
+        },
+        "HIGH": {
+          "LOW": 123,
+          "MODERATE": 1791,
+          "HIGH": 1381,
+          "SEVERE": 38,
+          "CRITICAL": 0
+        },
+        "SEVERE": {
+          "LOW": 3,
+          "MODERATE": 93,
+          "HIGH": 140,
+          "SEVERE": 89,
+          "CRITICAL": 0
+        },
+        "CRITICAL": {
+          "LOW": 0,
+          "MODERATE": 0,
+          "HIGH": 0,
+          "SEVERE": 0,
+          "CRITICAL": 0
+        }
+      },
+      "log_loss": null,
+      "brier_score": null
+    },
+    "rule_based": {
+      "partition": "val",
+      "total_samples": 26250,
+      "accuracy": 0.4838,
+      "balanced_accuracy": 0.434,
+      "macro_f1": 0.4105,
+      "class_metrics": {
+        "LOW": {
+          "support": 8007,
+          "precision": 0.4081,
+          "recall": 0.9981,
+          "f1": 0.5793,
+          "tp": 7992,
+          "fp": 11591,
+          "fn": 15
+        },
+        "MODERATE": {
+          "support": 14585,
+          "precision": 0.7,
+          "recall": 0.2582,
+          "f1": 0.3773,
+          "tp": 3766,
+          "fp": 1614,
+          "fn": 10819
+        },
+        "HIGH": {
+          "support": 3333,
+          "precision": 0.7686,
+          "recall": 0.261,
+          "f1": 0.3897,
+          "tp": 870,
+          "fp": 262,
+          "fn": 2463
+        },
+        "SEVERE": {
+          "support": 325,
+          "precision": 0.4581,
+          "recall": 0.2185,
+          "f1": 0.2958,
+          "tp": 71,
+          "fp": 84,
+          "fn": 254
+        },
+        "CRITICAL": {
+          "support": 0,
+          "precision": "undefined",
+          "recall": "undefined",
+          "f1": "undefined",
+          "tp": 0,
+          "fp": 0,
+          "fn": 0
+        }
+      },
+      "high_recall": 0.261,
+      "severe_recall": 0.2185,
+      "escalation_recall": 0.3108,
+      "severe_false_negatives": 254,
+      "severe_false_negative_rate": 0.7815,
+      "confusion_matrix": {
+        "LOW": {
+          "LOW": 7992,
+          "MODERATE": 15,
+          "HIGH": 0,
+          "SEVERE": 0,
+          "CRITICAL": 0
+        },
+        "MODERATE": {
+          "LOW": 10669,
+          "MODERATE": 3766,
+          "HIGH": 149,
+          "SEVERE": 1,
+          "CRITICAL": 0
+        },
+        "HIGH": {
+          "LOW": 886,
+          "MODERATE": 1494,
+          "HIGH": 870,
+          "SEVERE": 83,
+          "CRITICAL": 0
+        },
+        "SEVERE": {
+          "LOW": 36,
+          "MODERATE": 105,
+          "HIGH": 113,
+          "SEVERE": 71,
+          "CRITICAL": 0
+        },
+        "CRITICAL": {
+          "LOW": 0,
+          "MODERATE": 0,
+          "HIGH": 0,
+          "SEVERE": 0,
+          "CRITICAL": 0
+        }
+      },
+      "log_loss": null,
+      "brier_score": null
+    },
+    "safety_overrides_triggered": 0
+  },
+  "test": {
+    "lightgbm": {
+      "partition": "test",
+      "total_samples": 26320,
+      "accuracy": 0.8225,
+      "balanced_accuracy": 0.7598,
+      "macro_f1": 0.4657,
+      "class_metrics": {
+        "LOW": {
+          "support": 19957,
+          "precision": 0.9477,
+          "recall": 0.8495,
+          "f1": 0.8959,
+          "tp": 16954,
+          "fp": 936,
+          "fn": 3003
+        },
+        "MODERATE": {
+          "support": 6166,
+          "precision": 0.5992,
+          "recall": 0.7394,
+          "f1": 0.662,
+          "tp": 4559,
+          "fp": 3049,
+          "fn": 1607
+        },
+        "HIGH": {
+          "support": 197,
+          "precision": 0.1957,
+          "recall": 0.6904,
+          "f1": 0.3049,
+          "tp": 136,
+          "fp": 559,
+          "fn": 61
+        },
+        "SEVERE": {
+          "support": 0,
+          "precision": 0.0,
+          "recall": "undefined",
+          "f1": "undefined",
+          "tp": 0,
+          "fp": 127,
+          "fn": 0
+        },
+        "CRITICAL": {
+          "support": 0,
+          "precision": "undefined",
+          "recall": "undefined",
+          "f1": "undefined",
+          "tp": 0,
+          "fp": 0,
+          "fn": 0
+        }
+      },
+      "high_recall": 0.6904,
+      "severe_recall": "undefined",
+      "escalation_recall": 0.7614,
+      "severe_false_negatives": 0,
+      "severe_false_negative_rate": "undefined",
+      "confusion_matrix": {
+        "LOW": {
+          "LOW": 16954,
+          "MODERATE": 3002,
+          "HIGH": 1,
+          "SEVERE": 0,
+          "CRITICAL": 0
+        },
+        "MODERATE": {
+          "LOW": 936,
+          "MODERATE": 4559,
+          "HIGH": 558,
+          "SEVERE": 113,
+          "CRITICAL": 0
+        },
+        "HIGH": {
+          "LOW": 0,
+          "MODERATE": 47,
+          "HIGH": 136,
+          "SEVERE": 14,
+          "CRITICAL": 0
+        },
+        "SEVERE": {
+          "LOW": 0,
+          "MODERATE": 0,
+          "HIGH": 0,
+          "SEVERE": 0,
+          "CRITICAL": 0
+        },
+        "CRITICAL": {
+          "LOW": 0,
+          "MODERATE": 0,
+          "HIGH": 0,
+          "SEVERE": 0,
+          "CRITICAL": 0
+        }
+      },
+      "log_loss": 4.7434,
+      "brier_score": 1.5026
+    },
+    "persistence": {
+      "partition": "test",
+      "total_samples": 26320,
+      "accuracy": 0.8799,
+      "balanced_accuracy": 0.5936,
+      "macro_f1": 0.6514,
+      "class_metrics": {
+        "LOW": {
+          "support": 19957,
+          "precision": 0.8831,
+          "recall": 0.9797,
+          "f1": 0.9289,
+          "tp": 19552,
+          "fp": 2588,
+          "fn": 405
+        },
+        "MODERATE": {
+          "support": 6166,
+          "precision": 0.8662,
+          "recall": 0.5777,
+          "f1": 0.6931,
+          "tp": 3562,
+          "fp": 550,
+          "fn": 2604
+        },
+        "HIGH": {
+          "support": 197,
+          "precision": 0.6471,
+          "recall": 0.2234,
+          "f1": 0.3321,
+          "tp": 44,
+          "fp": 24,
+          "fn": 153
+        },
+        "SEVERE": {
+          "support": 0,
+          "precision": "undefined",
+          "recall": "undefined",
+          "f1": "undefined",
+          "tp": 0,
+          "fp": 0,
+          "fn": 0
+        },
+        "CRITICAL": {
+          "support": 0,
+          "precision": "undefined",
+          "recall": "undefined",
+          "f1": "undefined",
+          "tp": 0,
+          "fp": 0,
+          "fn": 0
+        }
+      },
+      "high_recall": 0.2234,
+      "severe_recall": "undefined",
+      "escalation_recall": 0.2234,
+      "severe_false_negatives": 0,
+      "severe_false_negative_rate": "undefined",
+      "confusion_matrix": {
+        "LOW": {
+          "LOW": 19552,
+          "MODERATE": 405,
+          "HIGH": 0,
+          "SEVERE": 0,
+          "CRITICAL": 0
+        },
+        "MODERATE": {
+          "LOW": 2580,
+          "MODERATE": 3562,
+          "HIGH": 24,
+          "SEVERE": 0,
+          "CRITICAL": 0
+        },
+        "HIGH": {
+          "LOW": 8,
+          "MODERATE": 145,
+          "HIGH": 44,
+          "SEVERE": 0,
+          "CRITICAL": 0
+        },
+        "SEVERE": {
+          "LOW": 0,
+          "MODERATE": 0,
+          "HIGH": 0,
+          "SEVERE": 0,
+          "CRITICAL": 0
+        },
+        "CRITICAL": {
+          "LOW": 0,
+          "MODERATE": 0,
+          "HIGH": 0,
+          "SEVERE": 0,
+          "CRITICAL": 0
+        }
+      },
+      "log_loss": null,
+      "brier_score": null
+    },
+    "rule_based": {
+      "partition": "test",
+      "total_samples": 26320,
+      "accuracy": 0.8142,
+      "balanced_accuracy": 0.435,
+      "macro_f1": 0.4639,
+      "class_metrics": {
+        "LOW": {
+          "support": 19957,
+          "precision": 0.8084,
+          "recall": 0.999,
+          "f1": 0.8937,
+          "tp": 19938,
+          "fp": 4725,
+          "fn": 19
+        },
+        "MODERATE": {
+          "support": 6166,
+          "precision": 0.9046,
+          "recall": 0.2399,
+          "f1": 0.3792,
+          "tp": 1479,
+          "fp": 156,
+          "fn": 4687
+        },
+        "HIGH": {
+          "support": 197,
+          "precision": 0.5909,
+          "recall": 0.066,
+          "f1": 0.1187,
+          "tp": 13,
+          "fp": 9,
+          "fn": 184
+        },
+        "SEVERE": {
+          "support": 0,
+          "precision": "undefined",
+          "recall": "undefined",
+          "f1": "undefined",
+          "tp": 0,
+          "fp": 0,
+          "fn": 0
+        },
+        "CRITICAL": {
+          "support": 0,
+          "precision": "undefined",
+          "recall": "undefined",
+          "f1": "undefined",
+          "tp": 0,
+          "fp": 0,
+          "fn": 0
+        }
+      },
+      "high_recall": 0.066,
+      "severe_recall": "undefined",
+      "escalation_recall": 0.066,
+      "severe_false_negatives": 0,
+      "severe_false_negative_rate": "undefined",
+      "confusion_matrix": {
+        "LOW": {
+          "LOW": 19938,
+          "MODERATE": 19,
+          "HIGH": 0,
+          "SEVERE": 0,
+          "CRITICAL": 0
+        },
+        "MODERATE": {
+          "LOW": 4678,
+          "MODERATE": 1479,
+          "HIGH": 9,
+          "SEVERE": 0,
+          "CRITICAL": 0
+        },
+        "HIGH": {
+          "LOW": 47,
+          "MODERATE": 137,
+          "HIGH": 13,
+          "SEVERE": 0,
+          "CRITICAL": 0
+        },
+        "SEVERE": {
+          "LOW": 0,
+          "MODERATE": 0,
+          "HIGH": 0,
+          "SEVERE": 0,
+          "CRITICAL": 0
+        },
+        "CRITICAL": {
+          "LOW": 0,
+          "MODERATE": 0,
+          "HIGH": 0,
+          "SEVERE": 0,
+          "CRITICAL": 0
+        }
+      },
+      "log_loss": null,
+      "brier_score": null
+    },
+    "safety_overrides_triggered": 0,
+    "severe_recall_note": "Zero positive instances of SEVERE in test partition (autumn/winter). SEVERE recall is undefined."
+  },
+  "latency": {
+    "single_sample_mean_ms": 0.8546,
+    "single_sample_p95_ms": 0.8537,
+    "single_sample_p99_ms": 3.0887,
+    "batch_total_ms": 69.98,
+    "batch_size": 26250,
+    "batch_throughput_samples_per_sec": 375103.42
+  },
+  "tuning_history": [
+    {
+      "config_name": "config_a_balanced_standard",
+      "params": {
+        "n_estimators": 100,
+        "learning_rate": 0.05,
+        "max_depth": 6,
+        "num_leaves": 31,
+        "class_weight": "balanced",
+        "subsample": 0.9,
+        "colsample_bytree": 0.9
+      },
+      "training_duration_sec": 2.061,
+      "macro_f1": 0.5124,
+      "high_recall": 0.5989,
+      "severe_recall": 0.5692,
+      "composite_score": 0.5554,
+      "accuracy": 0.6328,
+      "balanced_accuracy": 0.6024
+    },
+    {
+      "config_name": "config_b_balanced_regularized",
+      "params": {
+        "n_estimators": 150,
+        "learning_rate": 0.03,
+        "max_depth": 7,
+        "num_leaves": 35,
+        "min_child_samples": 40,
+        "class_weight": "balanced",
+        "subsample": 0.85,
+        "colsample_bytree": 0.85
+      },
+      "training_duration_sec": 3.091,
+      "macro_f1": 0.5104,
+      "high_recall": 0.6127,
+      "severe_recall": 0.5385,
+      "composite_score": 0.5495,
+      "accuracy": 0.6304,
+      "balanced_accuracy": 0.5964
+    },
+    {
+      "config_name": "config_c_escalation_boost",
+      "params": {
+        "n_estimators": 120,
+        "learning_rate": 0.04,
+        "max_depth": 6,
+        "num_leaves": 31,
+        "min_child_samples": 30,
+        "class_weight": {
+          "LOW": 1.0,
+          "MODERATE": 1.5,
+          "HIGH": 3.5,
+          "SEVERE": 8.0
+        },
+        "subsample": 0.9,
+        "colsample_bytree": 0.9
+      },
+      "training_duration_sec": 1.964,
+      "macro_f1": 0.6029,
+      "high_recall": 0.5545,
+      "severe_recall": 0.2185,
+      "composite_score": 0.4731,
+      "accuracy": 0.7402,
+      "balanced_accuracy": 0.5642
+    }
+  ],
+  "class_distributions": {
+    "train": {
+      "LOW": 77923,
+      "MODERATE": 39500,
+      "HIGH": 5027,
+      "SEVERE": 290
+    },
+    "val": {
+      "MODERATE": 14585,
+      "LOW": 8007,
+      "HIGH": 3333,
+      "SEVERE": 325
+    },
+    "test": {
+      "LOW": 19957,
+      "MODERATE": 6166,
+      "HIGH": 197
+    }
+  }
+}

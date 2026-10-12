@@ -1,0 +1,56 @@
+{
+  "dataset_name": "sample_heat_pipeline_data",
+  "data_version": "v1.0",
+  "feature_version": "weather-features-v1",
+  "target_version": "heat-target-v1",
+  "source": "synthetic_historical_generator",
+  "location_coverage": [
+    "loc_delhi_sample"
+  ],
+  "time_range": {
+    "start": "2026-05-01T00:00:00+00:00",
+    "end": "2026-05-15T00:00:00+00:00"
+  },
+  "created_at": "2026-10-05T11:57:30.062198+00:00",
+  "row_counts": {
+    "total": 336,
+    "train": 235,
+    "val": 50,
+    "test": 51
+  },
+  "features_list": [
+    "temperature_c",
+    "current_temperature_c",
+    "apparent_temperature_c",
+    "relative_humidity_pct",
+    "precipitation_mm",
+    "precipitation_probability_pct",
+    "wind_speed_kmh",
+    "dew_point_c",
+    "heat_index_c",
+    "wet_bulb_temperature_c",
+    "is_high_temperature",
+    "high_temperature_indicator",
+    "is_humidity_stress",
+    "humidity_stress_indicator",
+    "consecutive_hot_days",
+    "temperature_anomaly_c",
+    "recent_rainfall_1h_mm",
+    "rainfall_accumulation_24h_mm",
+    "rainfall_accumulation_7d_mm",
+    "rainfall_accumulation_30d_mm",
+    "rainfall_deficit_pct",
+    "consecutive_dry_days",
+    "soil_moisture_m3_m3",
+    "groundwater_depth_m",
+    "supply_outage_hours",
+    "hourly_precipitation_mm",
+    "forecast_precipitation_6h_mm",
+    "forecast_precipitation_mm",
+    "heavy_rain_indicator"
+  ],
+  "target_column": "target_heat_risk_category",
+  "target_type": "classification",
+  "is_synthetic": true,
+  "provenance_note": "SYNTHETIC SAMPLE DATA: Generated solely for testing pipeline mechanics and CI verification. Never use for real clinical or municipal hazard assessments."
+}

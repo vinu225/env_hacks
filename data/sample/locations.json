@@ -1,0 +1,73 @@
+[
+  {
+    "id": "loc_delhi_central",
+    "name": "Central Delhi (Connaught Place / NDMC)",
+    "state": "Delhi",
+    "country": "India",
+    "coordinates": {
+      "latitude": 28.6315,
+      "longitude": 77.2167
+    },
+    "elevation_meters": 216.0,
+    "population_density_per_sq_km": 11297.0,
+    "ward_or_zone": "Zone 1",
+    "metadata": {
+      "hotspot_type": "Dense Urban Heat Island",
+      "uhi_factor": 1.25,
+      "consecutive_hot_days": 4
+    }
+  },
+  {
+    "id": "loc_mumbai_kurla",
+    "name": "Kurla (Mithi River Basin)",
+    "state": "Maharashtra",
+    "country": "India",
+    "coordinates": {
+      "latitude": 19.0726,
+      "longitude": 72.8845
+    },
+    "elevation_meters": 8.0,
+    "population_density_per_sq_km": 25000.0,
+    "ward_or_zone": "Ward L",
+    "metadata": {
+      "hotspot_type": "High Vulnerability Flood & Waterlogging Basin",
+      "drainage_capacity_rating": 0.35,
+      "low_lying_basin": true
+    }
+  },
+  {
+    "id": "loc_chennai_velachery",
+    "name": "Velachery (South Chennai Basin)",
+    "state": "Tamil Nadu",
+    "country": "India",
+    "coordinates": {
+      "latitude": 12.9815,
+      "longitude": 80.2180
+    },
+    "elevation_meters": 6.0,
+    "population_density_per_sq_km": 18000.0,
+    "ward_or_zone": "Zone 13",
+    "metadata": {
+      "hotspot_type": "Inundation & Groundwater Stress",
+      "groundwater_depth_m": 28.5,
+      "consecutive_dry_days": 18
+    }
+  },
+  {
+    "id": "loc_bengaluru_bellandur",
+    "name": "Bellandur / Outer Ring Road",
+    "state": "Karnataka",
+    "country": "India",
+    "coordinates": {
+      "latitude": 12.9345,
+      "longitude": 77.6775
+    },
+    "elevation_meters": 880.0,
+    "population_density_per_sq_km": 14000.0,
+    "ward_or_zone": "Ward 150",
+    "metadata": {
+      "hotspot_type": "Urban Runoff & Lake Catchment Stress",
+      "reservoir_capacity_pct": 38.0
+    }
+  }
+]

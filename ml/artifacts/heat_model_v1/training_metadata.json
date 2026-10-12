@@ -1,0 +1,68 @@
+{
+  "artifact_version": "heat_model_v1",
+  "trained_at": "2026-10-11T11:29:11Z",
+  "dataset_source": "ECMWF ERA5 / ERA5-Land Reanalysis (Open-Meteo Archive)",
+  "row_counts_raw": {
+    "train": 122800,
+    "val": 26310,
+    "test": 26320
+  },
+  "row_counts_purged": {
+    "train": 122740,
+    "val": 26250,
+    "test": 26320,
+    "embargo_rows_dropped_per_boundary": 60
+  },
+  "canonical_features": [
+    "temperature_c",
+    "apparent_temperature_c",
+    "relative_humidity_pct",
+    "dew_point_c",
+    "heat_index_c",
+    "wet_bulb_temperature_c",
+    "wind_speed_kmh",
+    "consecutive_hot_days",
+    "is_high_temperature",
+    "is_humidity_stress",
+    "precipitation_mm",
+    "rainfall_accumulation_24h_mm",
+    "rainfall_accumulation_7d_mm",
+    "consecutive_dry_days"
+  ],
+  "pruned_features_100pct_missing": [
+    "precipitation_probability_pct",
+    "temperature_anomaly_c",
+    "rainfall_accumulation_30d_mm",
+    "rainfall_deficit_pct",
+    "soil_moisture_m3_m3",
+    "groundwater_depth_m",
+    "supply_outage_hours"
+  ],
+  "rejected_duplicate_aliases": [
+    "current_temperature_c",
+    "high_temperature_indicator",
+    "humidity_stress_indicator",
+    "hourly_precipitation_mm",
+    "forecast_precipitation_mm",
+    "recent_rainfall_1h_mm"
+  ],
+  "selected_configuration": {
+    "name": "config_a_balanced_standard",
+    "params": {
+      "n_estimators": 100,
+      "learning_rate": 0.05,
+      "max_depth": 6,
+      "num_leaves": 31,
+      "class_weight": "balanced",
+      "subsample": 0.9,
+      "colsample_bytree": 0.9
+    }
+  },
+  "random_seed": 42,
+  "dependencies": {
+    "lightgbm": "4.6.0",
+    "pandas": "2.3.3",
+    "numpy": "2.4.1",
+    "joblib": "1.5.3"
+  }
+}

@@ -1,0 +1,179 @@
+{
+  "dataset_name": "heat_risk_real",
+  "dataset_version": "v1.0",
+  "data_version": "v1.0",
+  "feature_version": "weather-features-v1",
+  "target_version": "heat-target-v1",
+  "source": "open-meteo-era5",
+  "data_type": "reanalysis",
+  "location_coverage": [
+    "loc_delhi",
+    "loc_bhopal",
+    "loc_jaipur",
+    "loc_nagpur",
+    "loc_lucknow",
+    "loc_ahmedabad",
+    "loc_hyderabad",
+    "loc_chennai",
+    "loc_mumbai",
+    "loc_bengaluru"
+  ],
+  "locations": [
+    {
+      "location_id": "loc_delhi",
+      "name": "Delhi",
+      "state": "Delhi",
+      "latitude": 28.6139,
+      "longitude": 77.209,
+      "climate_zone": "Semi-Arid (Hot Subtropical)",
+      "elevation_m": 216.0
+    },
+    {
+      "location_id": "loc_bhopal",
+      "name": "Bhopal",
+      "state": "Madhya Pradesh",
+      "latitude": 23.2599,
+      "longitude": 77.4126,
+      "climate_zone": "Humid Subtropical",
+      "elevation_m": 527.0
+    },
+    {
+      "location_id": "loc_jaipur",
+      "name": "Jaipur",
+      "state": "Rajasthan",
+      "latitude": 26.9124,
+      "longitude": 75.7873,
+      "climate_zone": "Hot Semi-Arid",
+      "elevation_m": 431.0
+    },
+    {
+      "location_id": "loc_nagpur",
+      "name": "Nagpur",
+      "state": "Maharashtra",
+      "latitude": 21.1458,
+      "longitude": 79.0882,
+      "climate_zone": "Tropical Wet and Dry",
+      "elevation_m": 310.0
+    },
+    {
+      "location_id": "loc_lucknow",
+      "name": "Lucknow",
+      "state": "Uttar Pradesh",
+      "latitude": 26.8467,
+      "longitude": 80.9462,
+      "climate_zone": "Humid Subtropical (Gangetic Plain)",
+      "elevation_m": 123.0
+    },
+    {
+      "location_id": "loc_ahmedabad",
+      "name": "Ahmedabad",
+      "state": "Gujarat",
+      "latitude": 23.0225,
+      "longitude": 72.5714,
+      "climate_zone": "Hot Semi-Arid",
+      "elevation_m": 53.0
+    },
+    {
+      "location_id": "loc_hyderabad",
+      "name": "Hyderabad",
+      "state": "Telangana",
+      "latitude": 17.385,
+      "longitude": 78.4867,
+      "climate_zone": "Tropical Wet and Dry",
+      "elevation_m": 542.0
+    },
+    {
+      "location_id": "loc_chennai",
+      "name": "Chennai",
+      "state": "Tamil Nadu",
+      "latitude": 13.0827,
+      "longitude": 80.2707,
+      "climate_zone": "Tropical Wet and Dry (Coastal)",
+      "elevation_m": 6.0
+    },
+    {
+      "location_id": "loc_mumbai",
+      "name": "Mumbai",
+      "state": "Maharashtra",
+      "latitude": 19.076,
+      "longitude": 72.8777,
+      "climate_zone": "Tropical Monsoon (Coastal)",
+      "elevation_m": 14.0
+    },
+    {
+      "location_id": "loc_bengaluru",
+      "name": "Bengaluru",
+      "state": "Karnataka",
+      "latitude": 12.9716,
+      "longitude": 77.5946,
+      "climate_zone": "Tropical Savanna (Plateau)",
+      "elevation_m": 920.0
+    }
+  ],
+  "time_range": {
+    "start": "2023-01-01T00:00:00+00:00",
+    "end": "2024-12-31T23:00:00+00:00"
+  },
+  "created_at": "2026-10-06T14:49:02.283140+00:00",
+  "row_counts": {
+    "total": 175430,
+    "train": 122800,
+    "val": 26310,
+    "test": 26320
+  },
+  "features_list": [
+    "temperature_c",
+    "current_temperature_c",
+    "apparent_temperature_c",
+    "relative_humidity_pct",
+    "precipitation_mm",
+    "precipitation_probability_pct",
+    "wind_speed_kmh",
+    "dew_point_c",
+    "heat_index_c",
+    "wet_bulb_temperature_c",
+    "is_high_temperature",
+    "high_temperature_indicator",
+    "is_humidity_stress",
+    "humidity_stress_indicator",
+    "consecutive_hot_days",
+    "temperature_anomaly_c",
+    "recent_rainfall_1h_mm",
+    "rainfall_accumulation_24h_mm",
+    "rainfall_accumulation_7d_mm",
+    "rainfall_accumulation_30d_mm",
+    "rainfall_deficit_pct",
+    "consecutive_dry_days",
+    "soil_moisture_m3_m3",
+    "groundwater_depth_m",
+    "supply_outage_hours",
+    "hourly_precipitation_mm",
+    "forecast_precipitation_6h_mm",
+    "forecast_precipitation_mm",
+    "heavy_rain_indicator"
+  ],
+  "target_column": "target_heat_risk_category",
+  "target_type": "classification",
+  "forecast_horizon_hours": 6,
+  "schema_version": "v1.1",
+  "is_synthetic": false,
+  "provider_config": {
+    "provider_name": "open-meteo-era5",
+    "timeout": 30.0,
+    "max_retries": 3
+  },
+  "target_generator_config": {
+    "target_type": "classification",
+    "version": "heat-target-v1",
+    "forecast_horizon_hours": 6,
+    "categories": [
+      "LOW",
+      "MODERATE",
+      "HIGH",
+      "SEVERE",
+      "CRITICAL"
+    ]
+  },
+  "provenance_note": "ECMWF ERA5 / ERA5-Land atmospheric reanalysis retrieved via Open-Meteo Historical Weather API. Blends numerical weather modeling with assimilated satellite and ground observations. Data tier: reanalysis (not direct raw ground station gauges).",
+  "ready_for_model_training": true
+}

@@ -1,0 +1,280 @@
+{
+  "dataset_version": "heat-risk-dataset-v1",
+  "source": "open-meteo-era5",
+  "data_type": "reanalysis",
+  "total_rows": 175430,
+  "location_count": 10,
+  "temporal_frequency": "hourly",
+  "observation_reanalysis_distinction": "ECMWF ERA5 / ERA5-Land reanalysis via Open-Meteo Archive API (assimilated numerical models + satellite/ground observations, not raw station gauge)",
+  "start_timestamp": "2023-01-01T00:00:00+00:00",
+  "end_timestamp": "2024-12-31T22:00:00+00:00",
+  "missing_percentage_by_column": {
+    "temperature_c": 0.0,
+    "current_temperature_c": 0.0,
+    "apparent_temperature_c": 0.0,
+    "relative_humidity_pct": 0.0,
+    "precipitation_mm": 0.0,
+    "precipitation_probability_pct": 100.0,
+    "wind_speed_kmh": 0.0,
+    "dew_point_c": 0.0,
+    "heat_index_c": 0.0,
+    "wet_bulb_temperature_c": 0.0,
+    "is_high_temperature": 0.0,
+    "high_temperature_indicator": 0.0,
+    "is_humidity_stress": 0.0,
+    "humidity_stress_indicator": 0.0,
+    "consecutive_hot_days": 0.0,
+    "temperature_anomaly_c": 100.0,
+    "recent_rainfall_1h_mm": 0.0,
+    "rainfall_accumulation_24h_mm": 0.0,
+    "rainfall_accumulation_7d_mm": 0.0,
+    "rainfall_accumulation_30d_mm": 100.0,
+    "rainfall_deficit_pct": 100.0,
+    "consecutive_dry_days": 0.0,
+    "soil_moisture_m3_m3": 100.0,
+    "groundwater_depth_m": 100.0,
+    "supply_outage_hours": 100.0,
+    "hourly_precipitation_mm": 0.0,
+    "forecast_precipitation_6h_mm": 0.0,
+    "forecast_precipitation_mm": 0.0,
+    "heavy_rain_indicator": 0.0
+  },
+  "feature_availability": {
+    "temperature_c": true,
+    "current_temperature_c": true,
+    "apparent_temperature_c": true,
+    "relative_humidity_pct": true,
+    "precipitation_mm": true,
+    "precipitation_probability_pct": false,
+    "wind_speed_kmh": true,
+    "dew_point_c": true,
+    "heat_index_c": true,
+    "wet_bulb_temperature_c": true,
+    "is_high_temperature": true,
+    "high_temperature_indicator": true,
+    "is_humidity_stress": true,
+    "humidity_stress_indicator": true,
+    "consecutive_hot_days": true,
+    "temperature_anomaly_c": false,
+    "recent_rainfall_1h_mm": true,
+    "rainfall_accumulation_24h_mm": true,
+    "rainfall_accumulation_7d_mm": true,
+    "rainfall_accumulation_30d_mm": false,
+    "rainfall_deficit_pct": false,
+    "consecutive_dry_days": true,
+    "soil_moisture_m3_m3": false,
+    "groundwater_depth_m": false,
+    "supply_outage_hours": false,
+    "hourly_precipitation_mm": true,
+    "forecast_precipitation_6h_mm": true,
+    "forecast_precipitation_mm": true,
+    "heavy_rain_indicator": true
+  },
+  "target_distribution": {
+    "LOW": 105913,
+    "MODERATE": 60332,
+    "HIGH": 8569,
+    "SEVERE": 616,
+    "_missing_count": 0
+  },
+  "target_percentages": {
+    "LOW": 60.37,
+    "MODERATE": 34.39,
+    "HIGH": 4.88,
+    "SEVERE": 0.35
+  },
+  "location_distribution": {
+    "loc_delhi": 17543,
+    "loc_bhopal": 17543,
+    "loc_jaipur": 17543,
+    "loc_nagpur": 17543,
+    "loc_lucknow": 17543,
+    "loc_ahmedabad": 17543,
+    "loc_hyderabad": 17543,
+    "loc_chennai": 17543,
+    "loc_mumbai": 17543,
+    "loc_bengaluru": 17543
+  },
+  "observations_per_location": {
+    "loc_delhi": 17543,
+    "loc_bhopal": 17543,
+    "loc_jaipur": 17543,
+    "loc_nagpur": 17543,
+    "loc_lucknow": 17543,
+    "loc_ahmedabad": 17543,
+    "loc_hyderabad": 17543,
+    "loc_chennai": 17543,
+    "loc_mumbai": 17543,
+    "loc_bengaluru": 17543
+  },
+  "dropped_rows_summary": {
+    "rows_dropped_insufficient_future_horizon": 10,
+    "rows_dropped_invalid_observations": 0,
+    "rows_dropped_duplicates": 0,
+    "rows_dropped_missing_required_features": 0
+  },
+  "temporal_split_timestamps": {
+    "train": {
+      "start": "2023-01-01T00:00:00+00:00",
+      "end": "2024-05-26T15:00:00+00:00",
+      "row_count": 122800
+    },
+    "validation": {
+      "start": "2024-05-26T16:00:00+00:00",
+      "end": "2024-09-13T06:00:00+00:00",
+      "row_count": 26310
+    },
+    "test": {
+      "start": "2024-09-13T07:00:00+00:00",
+      "end": "2024-12-31T22:00:00+00:00",
+      "row_count": 26320
+    }
+  },
+  "yearly_distribution": {
+    "2023": 87600,
+    "2024": 87830
+  },
+  "monthly_distribution": {
+    "2023-01": 7440,
+    "2023-02": 6720,
+    "2023-03": 7440,
+    "2023-04": 7200,
+    "2023-05": 7440,
+    "2023-06": 7200,
+    "2023-07": 7440,
+    "2023-08": 7440,
+    "2023-09": 7200,
+    "2023-10": 7440,
+    "2023-11": 7200,
+    "2023-12": 7440,
+    "2024-01": 7440,
+    "2024-02": 6960,
+    "2024-03": 7440,
+    "2024-04": 7200,
+    "2024-05": 7440,
+    "2024-06": 7200,
+    "2024-07": 7440,
+    "2024-08": 7440,
+    "2024-09": 7200,
+    "2024-10": 7440,
+    "2024-11": 7200,
+    "2024-12": 7430
+  },
+  "seasonal_distribution": {
+    "Monsoon (Jun-Sep)": 58560,
+    "Pre-Monsoon/Summer (Mar-May)": 44160,
+    "Post-Monsoon (Oct-Dec)": 44150,
+    "Winter (Jan-Feb)": 28560
+  },
+  "heat_events_summary": {
+    "total_heat_events": 824,
+    "mean_duration_hours": 11.15,
+    "max_duration_hours": 121,
+    "events_per_location": {
+      "loc_ahmedabad": 135,
+      "loc_bengaluru": 0,
+      "loc_bhopal": 18,
+      "loc_chennai": 163,
+      "loc_delhi": 136,
+      "loc_hyderabad": 2,
+      "loc_jaipur": 69,
+      "loc_lucknow": 181,
+      "loc_mumbai": 58,
+      "loc_nagpur": 62
+    },
+    "events_per_year": {
+      "2023": 359,
+      "2024": 465
+    }
+  },
+  "persistence_baseline_summary": {
+    "total_evaluated": 175430,
+    "accuracy": 0.8282,
+    "macro_f1": 0.5014,
+    "class_metrics": {
+      "LOW": {
+        "support": 105913,
+        "precision": 0.8306,
+        "recall": 0.9707,
+        "f1": 0.8952
+      },
+      "MODERATE": {
+        "support": 60332,
+        "precision": 0.8297,
+        "recall": 0.6451,
+        "f1": 0.7259
+      },
+      "HIGH": {
+        "support": 8569,
+        "precision": 0.7532,
+        "recall": 0.3961,
+        "f1": 0.5192
+      },
+      "SEVERE": {
+        "support": 616,
+        "precision": 0.6769,
+        "recall": 0.2516,
+        "f1": 0.3669
+      },
+      "CRITICAL": {
+        "support": 0,
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1": 0.0
+      }
+    },
+    "confusion_matrix": {
+      "LOW": {
+        "LOW": 102815,
+        "MODERATE": 3097,
+        "HIGH": 1,
+        "SEVERE": 0,
+        "CRITICAL": 0
+      },
+      "MODERATE": {
+        "LOW": 20587,
+        "MODERATE": 38922,
+        "HIGH": 823,
+        "SEVERE": 0,
+        "CRITICAL": 0
+      },
+      "HIGH": {
+        "LOW": 378,
+        "MODERATE": 4723,
+        "HIGH": 3394,
+        "SEVERE": 74,
+        "CRITICAL": 0
+      },
+      "SEVERE": {
+        "LOW": 5,
+        "MODERATE": 168,
+        "HIGH": 288,
+        "SEVERE": 155,
+        "CRITICAL": 0
+      },
+      "CRITICAL": {
+        "LOW": 0,
+        "MODERATE": 0,
+        "HIGH": 0,
+        "SEVERE": 0,
+        "CRITICAL": 0
+      }
+    },
+    "transition_analysis": {
+      "total_transitions": 30144,
+      "transition_percentage": 17.18,
+      "upward_escalations_missed_by_persistence": 26149,
+      "downward_relaxations_missed_by_persistence": 3995,
+      "escalation_miss_rate": 0.1491
+    },
+    "scientific_takeaway": "Persistence achieved 82.82% accuracy, but failed on 30144 dynamic transitions (17.18% of time steps). Specifically, persistence missed 26149 upward heat escalations where risk intensified during the 6-hour forward window. Future ML models must demonstrate higher recall on these escalations."
+  },
+  "target_predictability_check": {
+    "current_heat_index_vs_future_target_match_pct": 79.28,
+    "target_proximity_note": "Current heat index determines 79.28% of the forward 6-hour target label. The remaining 20.72% of cases represent dynamic transitions (diurnal rises, wet-bulb escalations, or nocturnal cooling) where forward forecasting is essential."
+  },
+  "duplicate_timestamp_count": 0,
+  "invalid_value_count": 0,
+  "validation_passed": true,
+  "issues": []
+}

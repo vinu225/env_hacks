@@ -1,0 +1,108 @@
+{
+  "version": "heat_features_v1",
+  "feature_count": 14,
+  "ordered_features": [
+    "temperature_c",
+    "apparent_temperature_c",
+    "relative_humidity_pct",
+    "dew_point_c",
+    "heat_index_c",
+    "wet_bulb_temperature_c",
+    "wind_speed_kmh",
+    "consecutive_hot_days",
+    "is_high_temperature",
+    "is_humidity_stress",
+    "precipitation_mm",
+    "rainfall_accumulation_24h_mm",
+    "rainfall_accumulation_7d_mm",
+    "consecutive_dry_days"
+  ],
+  "feature_definitions": {
+    "temperature_c": {
+      "type": "float",
+      "unit": "\u00b0C",
+      "description": "Ambient 2-meter air temperature"
+    },
+    "apparent_temperature_c": {
+      "type": "float",
+      "unit": "\u00b0C",
+      "description": "Physiological apparent temperature"
+    },
+    "relative_humidity_pct": {
+      "type": "float",
+      "unit": "%",
+      "description": "Relative air humidity"
+    },
+    "dew_point_c": {
+      "type": "float",
+      "unit": "\u00b0C",
+      "description": "Dew point temperature"
+    },
+    "heat_index_c": {
+      "type": "float",
+      "unit": "\u00b0C",
+      "description": "NOAA NWS Heat Index"
+    },
+    "wet_bulb_temperature_c": {
+      "type": "float",
+      "unit": "\u00b0C",
+      "description": "Stull wet-bulb temperature"
+    },
+    "wind_speed_kmh": {
+      "type": "float",
+      "unit": "km/h",
+      "description": "10-meter wind speed"
+    },
+    "consecutive_hot_days": {
+      "type": "float",
+      "unit": "days",
+      "description": "Consecutive days with Tmax >= alert mark"
+    },
+    "is_high_temperature": {
+      "type": "float",
+      "unit": "flag",
+      "description": "1.0 if temperature >= 40\u00b0C else 0.0"
+    },
+    "is_humidity_stress": {
+      "type": "float",
+      "unit": "flag",
+      "description": "1.0 if concurrent heat and humidity else 0.0"
+    },
+    "precipitation_mm": {
+      "type": "float",
+      "unit": "mm",
+      "description": "Hourly precipitation"
+    },
+    "rainfall_accumulation_24h_mm": {
+      "type": "float",
+      "unit": "mm",
+      "description": "24-hour rolling rainfall accumulation"
+    },
+    "rainfall_accumulation_7d_mm": {
+      "type": "float",
+      "unit": "mm",
+      "description": "7-day rolling rainfall accumulation"
+    },
+    "consecutive_dry_days": {
+      "type": "float",
+      "unit": "days",
+      "description": "Consecutive days with precipitation < 1mm"
+    }
+  },
+  "target_column": "target_heat_risk_category",
+  "empirical_classes": [
+    "LOW",
+    "MODERATE",
+    "HIGH",
+    "SEVERE"
+  ],
+  "safety_override_classes": [
+    "CRITICAL"
+  ],
+  "class_mapping": {
+    "LOW": 0,
+    "MODERATE": 1,
+    "HIGH": 2,
+    "SEVERE": 3
+  }
+}
