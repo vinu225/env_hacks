@@ -19,55 +19,108 @@ lib64/
 parts/
 sdist/
 var/
-
 wheels/
 *.egg-info/
 .installed.cfg
 *.egg
+*.manifest
+*.spec
 
 # Testing & Coverage
 .pytest_cache/
 .coverage
+.coverage.*
 htmlcov/
 .tox/
 .nox/
 coverage.xml
 *.cover
+.hypothesis/
+
+# Linters & Type Checking
+.mypy_cache/
+.dmypy.json
+dmypy.json
+.pyre/
+.pytype/
+.ruff_cache/
+.eslintcache
+
+# Jupyter Notebooks
+.ipynb_checkpoints
+*/.ipynb_checkpoints/*
 
 # Environments & Secrets
 .env
 .env.local
 .env.*.local
+.env.*
+!.env.example
+!.env.template
 *.pem
 *.key
+*.crt
+*.cert
+*.pfx
+*.p12
+
+# Database & Local Storage
+*.sqlite
+*.sqlite3
+*.db
+*.db-journal
 
 # IDE & OS
 .vscode/
 .idea/
 *.swp
 *.swo
+*~
 .DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
 Thumbs.db
+[Dd]esktop.ini
 
-# Frontend
+# Frontend & Node
+node_modules/
+dist/
+dist-ssr/
+build/
+.next/
+coverage/
+.vite/
+*.local
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+.pnpm-debug.log*
 frontend/node_modules/
 frontend/dist/
 frontend/build/
 frontend/.next/
 frontend/coverage/
 
-# ML Artifacts (only ignore heavy binary model weights, keep structure)
+# ML Artifacts (ignore heavy binary model weights, preserve directory structure)
 ml/artifacts/*.joblib
 ml/artifacts/*.pkl
 ml/artifacts/*.onnx
 ml/artifacts/*.pt
+ml/artifacts/*.pth
 ml/artifacts/*.bin
+ml/artifacts/*.h5
+ml/artifacts/*.tflite
 ml/datasets/raw/*
 !ml/datasets/raw/.gitkeep
 !ml/artifacts/.gitkeep
 
-# Logs & Temp
+# Logs & Temporary Files
 *.log
 logs/
 tmp/
+temp/
 scratch/
